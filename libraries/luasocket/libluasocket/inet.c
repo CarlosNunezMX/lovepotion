@@ -371,7 +371,7 @@ const char *inet_trydisconnect(p_socket ps, int family, p_timeout tm)
         }
         case AF_INET6: {
             struct sockaddr_in6 sin6;
-            struct in6_addr addrany = IN6ADDR_ANY_INIT;
+            struct in6_addr addrany = INADDR_ANY;
             memset((char *) &sin6, 0, sizeof(sin6));
             sin6.sin6_family = AF_UNSPEC;
             sin6.sin6_addr = addrany;
